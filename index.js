@@ -58,7 +58,7 @@ viewLogin = () => {
   html += `</div>`;
   html += `<div class="password">`;
   html += `<input class="password-text"
-                            type="text"
+                            type="password"
                             placeholder="Password" />`;
   html += `</div>`;
   html += `<div class="button">`;
