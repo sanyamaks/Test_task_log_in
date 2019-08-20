@@ -111,7 +111,7 @@ body {
 
 .email-text--error {
   color: rgb(237, 65, 89);
-  border: solid 1px rgb(237, 65, 89);
+  border: 1px solid rgb(237, 65, 89);
 }
 
 .email-text::placeholder {
@@ -168,7 +168,7 @@ body {
   background-color: rgba(237, 65, 89, 1);
 }
 
-.Text {
+.button-text {
   height: 100%;
   width: 100%;
   border-radius: 100px;
@@ -189,7 +189,7 @@ body {
   background-color: rgba(255, 255, 255, 1);
 }
 
-.button:hover .Text {
+.button:hover .button-text {
   color: rgb(237, 65, 89);
 }
 
