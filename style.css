@@ -3,7 +3,7 @@ html {
   min-height:100%;
   padding: 0;
   margin: 0;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 body {
   background-image: url("img/Wallpaper.png");
