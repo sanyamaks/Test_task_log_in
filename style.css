@@ -1,6 +1,6 @@
 html {
   height: 100%;
-  min-height:100%;
+  min-height: 100%;
   padding: 0;
   margin: 0;
   overflow-y: hidden;
@@ -12,7 +12,6 @@ body {
   background-repeat: no-repeat;
   height: 100%;
   min-height: 100%;
-  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -29,7 +28,7 @@ body {
   margin: 0;
 }
 
-.mercdev-logo {
+.logo-mercdev {
   height: 69px;
   min-height: 69px;
   width: 315px;
@@ -50,22 +49,15 @@ body {
   flex: 0 0 auto;
 }
 
-.form--logout {
+.form_logout {
   height: 414px;
 }
 
-.form--error {
+.form_error {
   height: 481px;
 }
 
-.footer {
-  display: flex;
-  flex: 1 1 auto;
-  width: 100%;
-  background: none;
-}
-
-.form-name {
+.form__form-name {
   width: 83px;
   height: 29px;
   margin-top: 48px;
@@ -81,20 +73,11 @@ body {
   color: rgba(38, 38, 38, 0.8);
 }
 
-.email {
-  display: flex;
-  align-items: center;
-  width: 504px;
+.form__input {
+  width: 488px;
   height: 48px;
   min-height: 48px;
-  padding: 0;
-  border-radius: 4px;
-  background: #f1f1f1;
-}
-
-.email-text {
-  width: 100%;
-  height: 100%;
+  max-height: 48px;
   font-family: Gotham, sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -105,72 +88,49 @@ body {
   color: rgba(0, 0, 0, 0.8);
   border: none;
   outline: none;
-  padding-left: 16px;
-  background: none;
+  background: #f1f1f1;
+  border-radius: 4px;
+  padding: 0 0 0 16px;
 }
 
-.email-text--error {
+.form__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
+.form__input_email_error {
   color: rgb(237, 65, 89);
-  border: 1px solid rgb(237, 65, 89);
 }
 
-.email-text::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: bold;
+.form__input_password {
+  margin-top: 32px;
 }
 
-.password {
+.form__error {
   display: flex;
   align-items: center;
-  width: 504px;
-  height: 48px;
-  min-height: 48px;
-  padding: 0;
+  width: 487px;
+  height: 40px;
+  min-height: 40px;
   border-radius: 4px;
-  margin-top: 32px;
-  background: #f1f1f1;
-}
-
-.password-text {
-  width: 100%;
-  height: 100%;
+  background-color: rgba(237, 65, 89, 0.25);
   font-family: Gotham, sans-serif;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: rgba(0, 0, 0, 0.8);
-  border: none;
-  outline: none;
-  padding-left: 16px;
-  background: none;
+  color: rgb(237, 65, 89);
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding: 0 0 0 16px;
 }
 
-.password-text::placeholder {
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: bold;
-}
-
-.button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form__button {
   width: 146px;
   height: 48px;
   min-height: 48px;
-  margin-bottom: 60px;
-  margin-top: 48px;
-  padding: 0;
-  border-radius: 100px;
-  box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
-  background-color: rgba(237, 65, 89, 1);
-}
-
-.button-text {
-  height: 100%;
-  width: 100%;
   border-radius: 100px;
   font-family: Gotham, sans-serif;
   font-size: 14px;
@@ -183,56 +143,37 @@ body {
   color: #ffffff;
   border: none;
   outline: none;
-  background: none;
-}
-.button:hover {
-  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+  background-color: rgba(237, 65, 89, 1);
+  margin-bottom: 60px;
 }
 
-.button:hover .button-text {
+.form__button:hover {
+  background-color: rgba(255, 255, 255, 1);
   color: rgb(237, 65, 89);
 }
 
-.button:active {
+.form__button:active {
   box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
 }
 
-.button--logout {
+.form__button_login {
+  margin-top: 48px;
+}
+
+.form__button_logout {
   width: 154px;
   margin-top: 56px;
 }
 
-.error {
-  display: flex;
-  width: 503px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: rgba(237, 65, 89, 0.25);
-  margin-top: 32px;
-}
-
-.error p {
-  width: 377px;
-  height: 20px;
-  font-family: Gotham, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: rgb(237, 65, 89);
-  margin-left: 16px;
-}
-
-.avatar {
+.form__user-avatar {
   border-radius: 100%;
   height: 128px;
   margin-bottom: 40px;
   margin-top: 48px;
 }
 
-.username {
+.form__username {
   width: 212px;
   height: 34px;
   opacity: 0.8;
@@ -247,8 +188,15 @@ body {
   color: rgb(38, 38, 38);
 }
 
+.footer {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  background: none;
+}
+
 @media screen and (max-width: 768px) {
-  .mercdev-logo {
+  .logo-mercdev {
     height: 40px;
     min-height: 40px;
     width: 182px;
@@ -259,15 +207,15 @@ body {
     height: 344px;
   }
 
-  .form--error {
+  .form_error {
     height: 408px;
   }
 
-  .form--logout {
+  .form_logout {
     height: 299px;
   }
 
-  .form-name {
+  .form__form-name {
     width: 68px;
     height: 24px;
     margin-top: 32px;
@@ -276,35 +224,39 @@ body {
     font-weight: 800;
   }
 
-  .email {
-    width: 240px;
+  .form__input {
+    width: 224px;
   }
 
-  .password {
-    width: 240px;
+  .form__input_password {
     margin-top: 24px;
   }
-  .error {
-    width: 240px;
+
+  .form__error {
+    width: 224px;
     margin-top: 24px;
   }
-  .button {
+
+  .form__button {
     width: 145px;
     margin-bottom: 48px;
+  }
+
+  .form__button_login {
     margin-top: 40px;
   }
 
-  .button--logout {
+  .form__button_logout {
     margin-top: 40px;
   }
 
-  .avatar {
+  .form__user-avatar {
     height: 86px;
     margin-bottom: 24px;
     margin-top: 32px;
   }
 
-  .username {
+  .form__username {
     width: 136px;
     height: 21px;
     font-size: 18px;

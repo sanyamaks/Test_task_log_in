@@ -10,11 +10,55 @@
     <script src="index.js" type="text/javascript"></script>
     <title>Log in</title>
   </head>
-  <body onload="loadPage()">
+  <body onload="viewLogin()">
     <div class="header">
-      <img class="mercdev-logo" src="img/mercdev.svg" />
+      <img class="logo-mercdev" src="img/mercdev.svg" />
     </div>
-    <div class="form"></div>
+    <div class="main"></div>
     <div class="footer"></div>
   </body>
 </html>
+
+<template class="login">
+  <form class="form" onsubmit="isValid()">
+    <div class="form__form-name">Log In</div>
+    <input
+      class="form__input"
+      id="email"
+      type="email"
+      placeholder="E-Mail"
+      pattern="([a-z0-9_-]+@[a-z0-9-]+\\.[a-z]{2,6})"
+      required
+      autofocus
+    />
+    <input
+      class="form__input form__input_password"
+      id="password"
+      type="password"
+      placeholder="Password"
+    />
+    <input
+      type="submit"
+      class="form__button form__button_login"
+      value="Login"
+      onclick="isValid()"
+    />
+  </form>
+</template>
+
+<template class="logout">
+  <form class="form form_logout">
+    <img class="form__user-avatar" src="" alt="" />
+    <div class="form__username"></div>
+    <input
+      type="button"
+      class="form__button form__button_logout"
+      value="Logout"
+      onclick="viewLogin()"
+    />
+  </form>
+</template>
+
+<template class="errorNotification">
+  <p class="form__error"></p>
+</template>
